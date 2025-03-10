@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/types.h>
+#include <sys/wait.h>
 #include <unistd.h>
 
 #define NUMBER_OF_CHILDS 3
@@ -30,7 +30,7 @@ int main()
 	// processo pai
 	for (int i = 0; i < NUMBER_OF_CHILDS; i++) //esperar para os processos acabarem
 	{
-		printf("Child with PID %d has terminated.\n", wait(NULL));
+		printf("Child with PID %d has terminated.\n", (pid_t)wait(NULL));
 	}
 
 }
