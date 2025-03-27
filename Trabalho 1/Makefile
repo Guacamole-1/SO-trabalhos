@@ -1,10 +1,7 @@
-ex1: ex1.c
+%: %.c
 	gcc $^ -o $@.out
 
-ex2: ex2.c
-	gcc $^ -o $@.out
-
-all: ex1
+all: ex1 ex2 ex3
 
 clean:
 	rm *.out
