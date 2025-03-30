@@ -1,5 +1,5 @@
 %: %.c
-	gcc $^ -o $@.out
+	gcc $^ -lm -o $@.out
 
 all: ex1 ex2 ex3
 
