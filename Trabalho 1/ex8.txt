@@ -1,0 +1,19 @@
+int main () {
+ for (int i = 0; i < 10; ++i) {
+    execlp(“date”, “date”, NULL);
+    sleep(1);
+ }
+ return 0;
+} 
+
+Este programa executa o programa date, para imprimir a data e hora no standard de output, em intervalos de 1 segundo durante 10 segundos -> Falso 
+R: O execlp substitui o processo e, se for bem-sucedido, o loop não continua. Assim, o programa executa date apenas uma vez e não espera 1 segundo entre execuções nem repete 10 vezes.
+
+São criados 10 processos auxiliares para executarem o programa date, ficando esses processos no estado zombie. -> Falso
+R: Não há nenhuma chamada a fork(). O execlp é chamado no mesmo processo, substituindo o processo atual. Não são criados processos auxiliares, nem ocorre a criação de zombies.
+
+Este código apenas executa o programa date 1 única vez. -> Verdadeiro 
+R: O execlp substitui o processo na primeira iteração do for, fazendo com que o programa date seja executado apenas uma vez.
+
+Este código deveria esperar pelos processos filhos através da utilização da chamada de sistema waitpid() -> Falso
+R: Como nenhum processo filho é criado (não há fork()), não faz sentido usar waitpid().

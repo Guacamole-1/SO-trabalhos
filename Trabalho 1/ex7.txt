@@ -1,0 +1,24 @@
+int main ()   {
+ printf("MSG 1\n");
+ for (int i = 0; i < 3; ++i) {
+    if (fork() == 0) {
+    printf("MSG 2\n");
+    }
+ }
+ printf("MSG 3\n");
+ return 0;
+} 
+
+A execução deste código irá originar além do processo
+principal mais 6 processos. -> Falso 
+R:O código apresentado cria um loop que chama fork() três vezes. Cada chamada a fork() duplica o número de processos. Portanto, após 3 chamadas, o número total de processos gerados será 2^3 = 8, incluindo o processo principal. Assim, haverá 7 processos filhos, não 6.
+
+A execução deste código irá originar além do processo
+principal mais 4 processos. -> Falso
+
+Este código pode originar processos órfãos, mas não processos
+zombies (defuncts). -> Falso
+R: o código pode originar processos órfãos se o processo pai terminar antes dos filhos. No entanto, também pode originar processos zombies se o pai não chamar wait() ou waitpid() para coletar o status de saída dos filhos. Portanto, a afirmação é falsa, pois ambos os tipos de processos podem ser gerados.
+
+
+Este código pode originar processos órfãos e processos zombies (defuncts). -> Verdadeiro 
