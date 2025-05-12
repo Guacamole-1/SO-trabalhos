@@ -19,10 +19,11 @@ int _check_error(int result, const char* func, const char* file, const int line,
 
 typedef enum {INFO, ERROR, DEBUG} LOG_LEVEL;
 
-static FILE *log_file = NULL;
+
 int log_init (const char *pathname);
 int log_message(LOG_LEVEL level, const char *msg);
 int log_message_width_end_point(LOG_LEVEL level, const char *msg, int sock);
 int log_close ();
+void log_error(char* cmd_error);
 
 #endif

@@ -3,6 +3,9 @@
 
 #include <time.h>
 #include <string.h>
+
+static FILE *log_file = NULL;
+
 // verificar se a função é < 0 e dar print ao erro
 // receber as constantes de o nome da função que a chamou, do ficheiro e do numero
 // e da linha recebidos do macro CHECK_ERROR
@@ -44,24 +47,34 @@ char* get_date(){
 }
 
 
-// inicia o ficheiro pathname em modo "a"
-// @return 1 em erro e 0 em sucesso
+// inicia o ficheiro pathname em modo "w" 
+// @return -1 em erro e 0 em sucesso
 int log_init (const char *pathname)
 {
-    log_file = fopen(pathname, "a");
+    log_file = fopen(pathname, "w");
 
     if (!log_file) {
-        perror("fopen");
-        return 1;
+        char msg[70] = "log file could not be created";
+        log_message(ERROR,strcat(msg,strerror(errno)));
+        return -1;
     }
+    
+    if (DEBUG_MODE)
+    {
+        char msg[70] = "log file sucessfully created in ";
+        log_message(DEBUG,strcat(msg,pathname));
+    }
+    
     return 0;
 }
 
 // dá print ao stdout e ao ficheiro definido em log_init
-// @return -1 em erro (se não houver log_file) e 0 em sucesso
+// @return -1 em erro e 0 em sucesso
 int log_message(LOG_LEVEL level, const char *msg){
     int ret = -1;
     char* date = get_date();
+    if (level == DEBUG && !DEBUG_MODE) return 0;
+
     if(log_file != NULL){
         fprintf(log_file,"[%s] %s - %s\n",log_level_to_str(level), date, msg);
         ret = 0;
@@ -102,7 +115,8 @@ char* get_sock_info(int fd) {
 int log_message_width_end_point(LOG_LEVEL level, const char *msg, int sock){
     int ret = -1;
     if(sock == -1) return -1;
-
+    if (level == DEBUG && !DEBUG_MODE) return 0;
+    
     char* date = get_date();
 
     char* sockinfo = get_sock_info(sock);
@@ -120,5 +134,11 @@ int log_message_width_end_point(LOG_LEVEL level, const char *msg, int sock){
 
 int log_close(){
     return CHECK_ERROR(fclose(log_file));
+}
+
+void log_error(char* cmd_error){
+    char log_msg[200];
+    CHECK_ERROR(snprintf(log_msg,sizeof(log_msg),"Error running %s: %s",cmd_error,strerror(errno)));
+    log_message(ERROR,log_msg);
 }
 

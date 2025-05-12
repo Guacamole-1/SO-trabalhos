@@ -1,0 +1,8 @@
+[DEBUG] 2025-04-20 23:16:11 - log file sucessfully created in ./logfile
+[INFO] 2025-04-20 23:16:11 - TCP server started on port 1234
+[INFO] 2025-04-20 23:16:11 - Connected to TCP server: IP=127.0.0.1 Port=1234
+[DEBUG] 2025-04-20 23:16:11 - log file sucessfully created in ./logfile
+[INFO] 2025-04-20 23:16:11 - TCP server started on port 1234
+[INFO] 2025-04-20 23:16:11 - New connection established: IP=127.0.0.1 Port=51504
+[DEBUG] 2025-04-20 23:16:11 - 64 bytes received from: IP=127.0.0.1 Port=51504
+[DEBUG] 2025-04-20 23:16:12 - 10 bytes received from: IP=127.0.0.1 Port=51504
