@@ -1,8 +1,7 @@
 #ifndef SOCKETS_H
 #define SOCKETS_H
 
-#define _STR(x)   #x
-#define STR(x)    _STR(x)
+
 
 #define SERVER_BACKLOG 100 //não é muito importante o backlog se estivermos sempre a aceitar conexões
 #define RUN_SIZE 11
@@ -10,15 +9,6 @@
 #define FILENAME_SIZE 100
 #define HEADERLEN RUN_SIZE+ARGS_SIZE+FILENAME_SIZE+sizeof(int)
 
-typedef struct _packet
-{
-    char* run;  // o programa a ser executado
-    char* args; // os argumentos a serem passados ao programa
-    char* file; // o nome do ficheiro
-    int dim;    // a dimensão em bytes do ficheiro (podia-se usar long int mas
-                // com int tem-se um tamanho máximo de 4Gb que é mais que suficiente
-    char* data; // conteudo do ficheiro
-} packet;
 
 
 int tcp_server_socket_init (int serverPort);
@@ -27,12 +17,10 @@ int tcp_client_socket_init (const char *host, int port);
 int un_server_socket_init (const char *serverEndPoint);
 int un_server_socket_accept (int serverSocket);
 int un_client_socket_init (const char *serverEndPoint);
-packet* create_packet(char* data,int dim,int fill_data);
-packet* get_cmd(const char* argv[],int argc,char* out_file);
-int read_all(int sockfd, char *buf, size_t len);
-int send_all(int sockfd, char *buf, size_t len);
-int smsg(int socketfd,packet* msg);
-packet* rmsg(int socketfd);
-packet* exec_cmd(packet* pak,char* output_file);
+int server_socket_accept(int serverSocket,char* conn_type);
+int create_server(const struct sockaddr *addr, socklen_t addrlen);
+struct sockaddr_un create_un_socket(const char *serverEndPoint);
+int start_tcp_server(int port);
+int start_unix_server(const char *path);
 
 #endif

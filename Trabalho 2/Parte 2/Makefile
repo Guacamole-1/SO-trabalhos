@@ -4,13 +4,16 @@
 %.o: %.c %.h
 	gcc -Wall -c $< -o $@
 
-ServerTCP: ServerTCP.c sockets.o globals.o 
+Server: Server.c sockets.o globals.o packets.o
+	gcc -Wall -pthread $^ -o $@.out
+
+Client: Client.c sockets.o globals.o packets.o
 	gcc -Wall -pthread $^ -o $@.out
 
 all: ex2.c
 
 clean:
-	rm *.out
+	rm *.out *.o *.log
 
 run:
 	./childs.out

@@ -14,7 +14,7 @@ int _check_error(int result, const char* func, const char* file, const int line,
     
     if(result < 0){
         if(DEBUG_MODE){
-            fprintf(stderr, "[DEBUG] in (%s:%d) %s:\n\t", file, line,func);
+            fprintf(stderr, "[DEBUG] in (%s:%d) %s:\n", file, line,func);
         }
         log_message(ERROR,strerror(errno));
         if (exit_failure == 1){
@@ -54,15 +54,17 @@ int log_init (const char *pathname)
     log_file = fopen(pathname, "w");
 
     if (!log_file) {
-        char msg[70] = "log file could not be created";
-        log_message(ERROR,strcat(msg,strerror(errno)));
+        char msg[150] = "log file could not be created";
+        snprintf(msg, sizeof(msg),"log file could not be created: %s",strerror(errno));
+        log_message(ERROR, msg);
         return -1;
     }
     
     if (DEBUG_MODE)
     {
-        char msg[70] = "log file sucessfully created in ";
-        log_message(DEBUG,strcat(msg,pathname));
+        char msg[150] = "log file sucessfully created in ";
+        snprintf(msg, sizeof(msg),"log file successfully created in %s",pathname);
+        log_message(DEBUG, msg);
     }
     
     return 0;
@@ -89,7 +91,7 @@ int log_message(LOG_LEVEL level, const char *msg){
 char* get_sock_info(int fd) {
     struct sockaddr_storage addr;
     socklen_t len = sizeof(addr);
-    char* return_msg = malloc(114);
+    char* return_msg = malloc(150);
 
     if(CHECK_ERROR(getpeername(fd, (struct sockaddr *)&addr, &len))){
         strcpy(return_msg,"Error");
