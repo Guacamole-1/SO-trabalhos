@@ -31,8 +31,6 @@ void* handle_connection(void* arg) {
         smsg(clientfd,execd);
     }
     
-
-
     log_message_width_end_point(INFO, "Connection closed", clientfd);
     close(clientfd);
     return NULL;

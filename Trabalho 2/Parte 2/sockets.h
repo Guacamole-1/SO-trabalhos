@@ -3,7 +3,7 @@
 
 
 
-#define SERVER_BACKLOG 100 //não é muito importante o backlog se estivermos sempre a aceitar conexões
+#define SERVER_BACKLOG 3000 
 #define RUN_SIZE 11
 #define ARGS_SIZE 256
 #define FILENAME_SIZE 100

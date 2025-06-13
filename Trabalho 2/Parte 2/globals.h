@@ -7,6 +7,7 @@
 #include <arpa/inet.h>
 #include <sys/un.h>
 #include <errno.h> 
+
 // Macro para dar a _check_error a função que o chamou (em string), o
 // ficheiro que a chamou e a linha
 // Retorna: 1-Erro 0-Sucesso

@@ -385,6 +385,7 @@ int send_all(int sockfd, char *buf, size_t len) {
     return len == total ? 0 : -1 ;
 }
 
+
 // envia msg para socketfd
 // @return 0 em sucesso e -1 em erro
 int smsg(int socketfd,packet* msg){

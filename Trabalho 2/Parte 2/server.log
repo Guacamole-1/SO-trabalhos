@@ -1,0 +1,64 @@
+[DEBUG] 2025-05-20 11:23:14 - log file successfully created in server.log
+[INFO] 2025-05-20 11:23:14 - TCP server started on port 1234
+[INFO] 2025-05-20 11:23:14 - UNIX server started on /tmp/my_server_socket
+[INFO] 2025-05-20 11:23:14 - TCP and UNIX servers running
+[INFO] 2025-05-20 11:23:49 - New tcp connection established: IP=127.0.0.1 Port=47240
+[INFO] 2025-05-20 11:23:49 - New tcp connection established: IP=127.0.0.1 Port=47244
+[DEBUG] 2025-05-20 11:23:49 - 371 bytes of header received from: IP=127.0.0.1 Port=47240
+[INFO] 2025-05-20 11:23:49 - New tcp connection established: IP=127.0.0.1 Port=47242
+[DEBUG] 2025-05-20 11:23:49 - 371 bytes of header received from: IP=127.0.0.1 Port=47244
+[INFO] 2025-05-20 11:23:49 - New tcp connection established: IP=127.0.0.1 Port=47246
+[DEBUG] 2025-05-20 11:23:49 - 371 bytes of header received from: IP=127.0.0.1 Port=47242
+[DEBUG] 2025-05-20 11:23:49 - 371 bytes of header received from: IP=127.0.0.1 Port=47246
+[DEBUG] 2025-05-20 11:23:49 - 114690 bytes of file data received from: IP=127.0.0.1 Port=47244
+[DEBUG] 2025-05-20 11:23:49 - 114690 bytes of file data received from: IP=127.0.0.1 Port=47246
+[DEBUG] 2025-05-20 11:23:49 - 114690 bytes of file data received from: IP=127.0.0.1 Port=47242
+[DEBUG] 2025-05-20 11:23:49 - 114690 bytes of file data received from: IP=127.0.0.1 Port=47240
+[DEBUG] 2025-05-20 11:23:14 - log file successfully created in server.log
+[INFO] 2025-05-20 11:23:14 - TCP server started on port 1234
+[INFO] 2025-05-20 11:23:14 - UNIX server started on /tmp/my_server_socket
+[INFO] 2025-05-20 11:23:14 - TCP and UNIX servers running
+[INFO] 2025-05-20 11:23:49 - New tcp connection established: IP=127.0.0.1 Port=47240
+[INFO] 2025-05-20 11:23:49 - New tcp connection established: IP=127.0.0.1 Port=47244
+[DEBUG] 2025-05-20 11:23:49 - 371 bytes of header received from: IP=127.0.0.1 Port=47240
+[INFO] 2025-05-20 11:23:49 - New tcp connection established: IP=127.0.0.1 Port=47242
+[DEBUG] 2025-05-20 11:23:49 - 371 bytes of header received from: IP=127.0.0.1 Port=47244
+[INFO] 2025-05-20 11:23:49 - New tcp connection established: IP=127.0.0.1 Port=47246
+[DEBUG] 2025-05-20 11:23:49 - 371 bytes of header received from: IP=127.0.0.1 Port=47242
+[DEBUG] 2025-05-20 11:23:49 - 371 bytes of header received from: IP=127.0.0.1 Port=47246
+[DEBUG] 2025-05-20 11:23:49 - 114690 bytes of file data received from: IP=127.0.0.1 Port=47244
+[DEBUG] 2025-05-20 11:23:49 - 114690 bytes of file data received from: IP=127.0.0.1 Port=47246
+[DEBUG] 2025-05-20 11:23:49 - 114690 bytes of file data received from: IP=127.0.0.1 Port=47242
+[DEBUG] 2025-05-20 11:23:49 - 114690 bytes of file data received from: IP=127.0.0.1 Port=47240
+[DEBUG] 2025-05-20 11:23:14 - log file successfully created in server.log
+[INFO] 2025-05-20 11:23:14 - TCP server started on port 1234
+[INFO] 2025-05-20 11:23:14 - UNIX server started on /tmp/my_server_socket
+[INFO] 2025-05-20 11:23:14 - TCP and UNIX servers running
+[INFO] 2025-05-20 11:23:49 - New tcp connection established: IP=127.0.0.1 Port=47240
+[INFO] 2025-05-20 11:23:49 - New tcp connection established: IP=127.0.0.1 Port=47244
+[DEBUG] 2025-05-20 11:23:49 - 371 bytes of header received from: IP=127.0.0.1 Port=47240
+[INFO] 2025-05-20 11:23:49 - New tcp connection established: IP=127.0.0.1 Port=47242
+[DEBUG] 2025-05-20 11:23:49 - 371 bytes of header received from: IP=127.0.0.1 Port=47244
+[INFO] 2025-05-20 11:23:49 - New tcp connection established: IP=127.0.0.1 Port=47246
+[DEBUG] 2025-05-20 11:23:49 - 371 bytes of header received from: IP=127.0.0.1 Port=47242
+[DEBUG] 2025-05-20 11:23:49 - 371 bytes of header received from: IP=127.0.0.1 Port=47246
+[DEBUG] 2025-05-20 11:23:49 - 114690 bytes of file data received from: IP=127.0.0.1 Port=47244
+[DEBUG] 2025-05-20 11:23:49 - 114690 bytes of file data received from: IP=127.0.0.1 Port=47246
+[DEBUG] 2025-05-20 11:23:49 - 114690 bytes of file data received from: IP=127.0.0.1 Port=47242
+[DEBUG] 2025-05-20 11:23:49 - 114690 bytes of file data received from: IP=127.0.0.1 Port=47240
+[DEBUG] 2025-05-20 11:23:14 - log file successfully created in server.log
+[INFO] 2025-05-20 11:23:14 - TCP server started on port 1234
+[INFO] 2025-05-20 11:23:14 - UNIX server started on /tmp/my_server_socket
+[INFO] 2025-05-20 11:23:14 - TCP and UNIX servers running
+[INFO] 2025-05-20 11:23:49 - New tcp connection established: IP=127.0.0.1 Port=47240
+[INFO] 2025-05-20 11:23:49 - New tcp connection established: IP=127.0.0.1 Port=47244
+[DEBUG] 2025-05-20 11:23:49 - 371 bytes of header received from: IP=127.0.0.1 Port=47240
+[INFO] 2025-05-20 11:23:49 - New tcp connection established: IP=127.0.0.1 Port=47242
+[DEBUG] 2025-05-20 11:23:49 - 371 bytes of header received from: IP=127.0.0.1 Port=47244
+[INFO] 2025-05-20 11:23:49 - New tcp connection established: IP=127.0.0.1 Port=47246
+[DEBUG] 2025-05-20 11:23:49 - 371 bytes of header received from: IP=127.0.0.1 Port=47242
+[DEBUG] 2025-05-20 11:23:49 - 371 bytes of header received from: IP=127.0.0.1 Port=47246
+[DEBUG] 2025-05-20 11:23:49 - 114690 bytes of file data received from: IP=127.0.0.1 Port=47244
+[DEBUG] 2025-05-20 11:23:49 - 114690 bytes of file data received from: IP=127.0.0.1 Port=47246
+[DEBUG] 2025-05-20 11:23:49 - 114690 bytes of file data received from: IP=127.0.0.1 Port=47242
+[DEBUG] 2025-05-20 11:23:49 - 114690 bytes of file data received from: IP=127.0.0.1 Port=47240
